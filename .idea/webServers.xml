@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0b95611c-1b8b-4a8b-9bb3-f7aa468a17dc" name="serv">
+        <fileTransfer accessType="SFTP" host="ovz4.j685148.m3xdm.vps.myjino.ru" port="49191" sshConfigId="a7ae649c-4d37-412a-b2a4-208739e4ece5" sshConfig="root@ovz4.j685148.m3xdm.vps.myjino.ru:49191 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
