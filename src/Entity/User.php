@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Class User
  * @package App\Entity
  *
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity()
  * @ORM\Table(name="users", options={"comment":"Таблица пользователей"})
  * @UniqueEntity("username", message="Введенное имя пользователя уже используется.")
  */
@@ -151,7 +151,7 @@ class User implements UserInterface
      */
     public function getRoles()
     {
-        return ['ROLE_API'];
+        return ['ROLE_USER'];
     }
 
     /**
