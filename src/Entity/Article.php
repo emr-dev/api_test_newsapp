@@ -63,53 +63,8 @@ class Article
         $this->short_description = $short_description;
     }
 
-    /**
-     * @return string
-     */
-    public function getKeywords(): string
-    {
-        return $this->keywords;
-    }
 
-    /**
-     * @param string $keywords
-     */
-    public function setKeywords(string $keywords): void
-    {
-        $this->keywords = $keywords;
-    }
 
-    /**
-     * @return string
-     */
-    public function getTags(): string
-    {
-        return $this->tags;
-    }
-
-    /**
-     * @param string $tags
-     */
-    public function setTags(string $tags): void
-    {
-        $this->tags = $tags;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMetatitle(): string
-    {
-        return $this->metatitle;
-    }
-
-    /**
-     * @param string $metatitle
-     */
-    public function setMetatitle(string $metatitle): void
-    {
-        $this->metatitle = $metatitle;
-    }
 
     /**
      * @var string
@@ -127,29 +82,6 @@ class Article
      */
     private $description;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="keywords", type="text",   options={"comment":"keywords"})
-     * @Assert\NotBlank
-     */
-    private $keywords;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="tags", type="text",   options={"comment":"tags"})
-     * @Assert\NotBlank
-     */
-    private $tags;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="metatitle", type="text",   options={"comment":"metatitle"})
-     * @Assert\NotBlank
-     */
-    private $metatitle;
 
 
     /**
