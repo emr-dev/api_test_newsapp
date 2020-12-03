@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="article", options={"comment":"Статьи"})
  * @ORM\HasLifecycleCallbacks()
  */
-class Article
+class Article implements \JsonSerializable
 {
 
     /**
@@ -193,5 +193,18 @@ class Article
     }
 
 
-
+    /**
+     * @return mixed
+     */
+    public function jsonSerialize()
+    {
+        return [
+          'id' => $this->id,
+          'title' => $this->name,
+          'category'=> $this->category,
+          'image' => $this->image,
+          'description' => $this->description,
+          'date' => $this->data_create,
+        ];
+    }
 }

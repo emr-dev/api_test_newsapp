@@ -17,7 +17,7 @@ CURLOPT_HTTPHEADER => array(
   ),
 ```
 
-## Получение источников(категорий) из API 
+## Получение источников(категорий) через API 
 
 Запрос:
 
@@ -49,6 +49,47 @@ X-AUTH-TOKEN: YOU_API_KEY
             "description": "Источник"
         },
  
+    ]
+}
+```
+
+
+## Получение новостей через API 
+
+Запрос:
+
+ ```
+GET: aapi-news.emrdev.ru/api/article?category_id=1
+
+Если не указывать category_id, то вернутся все новсти
+
+X-AUTH-TOKEN: YOU_API_KEY
+```
+
+
+Ответ:
+
+```
+{
+    "status": "ok",
+    "count": 1,
+    "data": [
+        {
+            "id": 3,
+            "title": "В Москве по делу о госизмене арестовали преподавателя МФТИ - Новости – Происшествия - Коммерсантъ",
+            "category": {
+                "id": 1,
+                "name": "Kommersant.ru",
+                "description": "Источник"
+            },
+            "image": "https://im.kommersant.ru/SocialPics/4596205_26_0_172847667",
+            "description": "Подробнее на сайте",
+            "date": {
+                "date": "2020-12-03 15:55:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            }
+        }
     ]
 }
 ```
