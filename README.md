@@ -16,3 +16,39 @@ CURLOPT_HTTPHEADER => array(
     'Cookie: PHPSESSID=f0t9jjq43jnqtephd3nho5du1j'
   ),
 ```
+
+## Получение источников(категорий) из API 
+
+Запрос:
+
+ ```
+GET: api-news.emrdev.ru/api/category 
+
+X-AUTH-TOKEN: YOU_API_KEY
+```
+
+Ответ:
+
+```
+{
+    "status": "ok",
+    "data": [
+        {
+            "id": 1,
+            "name": "Kommersant.ru",
+            "description": "Источник"
+        },
+        {
+            "id": 2,
+            "name": "RBC",
+            "description": "Источник"
+        },
+        {
+            "id": 3,
+            "name": "Championat.com",
+            "description": "Источник"
+        },
+ 
+    ]
+}
+```

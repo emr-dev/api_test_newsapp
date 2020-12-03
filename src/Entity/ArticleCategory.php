@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="articlecategory")
  * @ORM\HasLifecycleCallbacks()
  */
-class ArticleCategory
+class ArticleCategory implements \JsonSerializable
 {
     /**
      * @var int
@@ -85,4 +85,15 @@ class ArticleCategory
         $this->description = $description;
     }
 
+    /**
+     * @return mixed
+     */
+    public function jsonSerialize()
+    {
+        return  [
+            'id'=> $this->id,
+            'name'=> $this->name,
+            'description'=> $this->description,
+        ];
+    }
 }
